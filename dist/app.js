@@ -14,9 +14,7 @@ function fetchData() {
     return __awaiter(this, void 0, void 0, function* () {
         const response = yield fetch("http://localhost:3000/items");
         const sec_response = yield response.json();
-        //console.log(sec_response); 
-        characters = sec_response;
-        console.log(characters[5]);
+        console.log(sec_response);
     });
 }
 fetchData();

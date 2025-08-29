@@ -6,11 +6,7 @@ async function fetchData() {
   
     const response = await fetch("http://localhost:3000/items");
     const sec_response = await response.json()
-    //console.log(sec_response); 
-    characters= sec_response
-    console.log(characters[5]);
+    console.log(sec_response); 
 }
 
 fetchData();
-
-
