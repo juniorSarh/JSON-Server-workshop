@@ -14,7 +14,13 @@ function fetchData() {
     return __awaiter(this, void 0, void 0, function* () {
         const response = yield fetch("http://localhost:3000/items");
         const sec_response = yield response.json();
-        console.log(sec_response);
+        characters = sec_response;
+        console.log(sec_response[1]);
     });
 }
 fetchData();
+let root = document.getElementById("root");
+function noCharacterData(rootElement, message) {
+    rootElement.innerHTML = message;
+}
+noCharacterData(root, "They are no characters to display");
